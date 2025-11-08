@@ -1,0 +1,109 @@
+from pathlib import Path
+
+# Conteúdo aprimorado do tema Dracula
+dracula_xml_content = """<?xml version="1.0" encoding="Windows-1252"?>
+<NotepadPlus>
+    <!-- ========================================================= -->
+    <!--     Dracula Theme for Notepad++ (by Saulo de Tarso)       -->
+    <!-- ========================================================= -->
+
+    <GUIConfig name="Dracula">
+        <GlobalStyles>
+            <WidgetStyle name="Default Style" styleID="32" fgColor="F8F8F2" bgColor="282A36" fontName="JetBrains Mono" fontStyle="0" fontSize="11" />
+            <WidgetStyle name="Caret Colour" styleID="0" fgColor="FFFFFF" bgColor="282A36" />
+            <WidgetStyle name="Line number" styleID="33" fgColor="6272A4" bgColor="282A36" />
+            <WidgetStyle name="Fold" styleID="34" fgColor="FF79C6" bgColor="282A36" />
+            <WidgetStyle name="Selected text colour" styleID="0" fgColor="F8F8F2" bgColor="44475A" />
+            <WidgetStyle name="Current line background colour" styleID="0" fgColor="F8F8F2" bgColor="3A3C4E" />
+            <WidgetStyle name="Brace highlight style" styleID="35" fgColor="50FA7B" bgColor="282A36" />
+            <WidgetStyle name="Active tab focused indicator" styleID="36" fgColor="8BE9FD" bgColor="282A36" />
+        </GlobalStyles>
+    </GUIConfig>
+
+    <LexerStyles>
+        <LexerType name="java" desc="Java" ext="">
+            <WordsStyle name="DEFAULT" styleID="11" fgColor="F8F8F2" bgColor="282A36" />
+            <WordsStyle name="INSTRUCTION WORD" styleID="5" fgColor="FF79C6" bgColor="282A36" fontStyle="1" />
+            <WordsStyle name="TYPE WORD" styleID="16" fgColor="8BE9FD" bgColor="282A36" fontStyle="1" />
+            <WordsStyle name="NUMBER" styleID="4" fgColor="BD93F9" bgColor="282A36" />
+            <WordsStyle name="STRING" styleID="6" fgColor="F1FA8C" bgColor="282A36" fontStyle="1" />
+            <WordsStyle name="COMMENT" styleID="1" fgColor="6272A4" bgColor="282A36" fontStyle="2" />
+            <WordsStyle name="COMMENT LINE" styleID="2" fgColor="6272A4" bgColor="282A36" fontStyle="2" />
+            <WordsStyle name="OPERATOR" styleID="10" fgColor="FF79C6" bgColor="282A36" />
+        </LexerType>
+
+        <LexerType name="cpp" desc="C++" ext="">
+            <WordsStyle name="DEFAULT" styleID="11" fgColor="F8F8F2" bgColor="282A36" />
+            <WordsStyle name="INSTRUCTION WORD" styleID="5" fgColor="FF79C6" bgColor="282A36" fontStyle="1" />
+            <WordsStyle name="TYPE WORD" styleID="16" fgColor="8BE9FD" bgColor="282A36" fontStyle="1" />
+            <WordsStyle name="NUMBER" styleID="4" fgColor="BD93F9" bgColor="282A36" />
+            <WordsStyle name="STRING" styleID="6" fgColor="F1FA8C" bgColor="282A36" fontStyle="1" />
+            <WordsStyle name="COMMENT" styleID="1" fgColor="6272A4" bgColor="282A36" fontStyle="2" />
+            <WordsStyle name="COMMENT LINE" styleID="2" fgColor="6272A4" bgColor="282A36" fontStyle="2" />
+            <WordsStyle name="OPERATOR" styleID="10" fgColor="FF79C6" bgColor="282A36" />
+        </LexerType>
+
+        <LexerType name="rust" desc="Rust" ext="">
+            <WordsStyle name="DEFAULT" styleID="11" fgColor="F8F8F2" bgColor="282A36" />
+            <WordsStyle name="COMMENT" styleID="1" fgColor="6272A4" bgColor="282A36" fontStyle="2" />
+            <WordsStyle name="KEYWORDS 1" styleID="8" fgColor="FF79C6" bgColor="282A36" fontStyle="1" />
+            <WordsStyle name="STRING" styleID="6" fgColor="F1FA8C" bgColor="282A36" fontStyle="1" />
+            <WordsStyle name="NUMBER" styleID="4" fgColor="BD93F9" bgColor="282A36" />
+            <WordsStyle name="OPERATOR" styleID="11" fgColor="8BE9FD" bgColor="282A36" />
+            <WordsStyle name="LEXICAL ERROR" styleID="20" fgColor="F8F8F2" bgColor="FF5555" />
+        </LexerType>
+
+        <LexerType name="xml" desc="XML / HTML" ext="xml html htm xhtml">
+            <WordsStyle name="TAG" styleID="1" fgColor="FF79C6" bgColor="282A36" fontStyle="1" />
+            <WordsStyle name="ATTRIBUTE" styleID="3" fgColor="8BE9FD" bgColor="282A36" />
+            <WordsStyle name="STRING" styleID="6" fgColor="F1FA8C" bgColor="282A36" />
+            <WordsStyle name="COMMENT" styleID="9" fgColor="6272A4" bgColor="282A36" fontStyle="2" />
+            <WordsStyle name="NUMBER" styleID="5" fgColor="BD93F9" bgColor="282A36" />
+            <WordsStyle name="DEFAULT" styleID="0" fgColor="F8F8F2" bgColor="282A36" />
+        </LexerType>
+
+        <LexerType name="css" desc="CSS" ext="css">
+            <WordsStyle name="TAG" styleID="1" fgColor="8BE9FD" bgColor="282A36" />
+            <WordsStyle name="CLASS" styleID="2" fgColor="FF79C6" bgColor="282A36" />
+            <WordsStyle name="PSEUDOCLASS" styleID="3" fgColor="BD93F9" bgColor="282A36" />
+            <WordsStyle name="OPERATOR" styleID="4" fgColor="F8F8F2" bgColor="282A36" />
+            <WordsStyle name="VALUE" styleID="5" fgColor="F1FA8C" bgColor="282A36" />
+            <WordsStyle name="COMMENT" styleID="9" fgColor="6272A4" bgColor="282A36" fontStyle="2" />
+            <WordsStyle name="DEFAULT" styleID="0" fgColor="F8F8F2" bgColor="282A36" />
+        </LexerType>
+
+        <LexerType name="javascript" desc="JavaScript" ext="js jsx mjs">
+            <WordsStyle name="DEFAULT" styleID="11" fgColor="F8F8F2" bgColor="282A36" />
+            <WordsStyle name="KEYWORD" styleID="5" fgColor="FF79C6" bgColor="282A36" fontStyle="1" />
+            <WordsStyle name="STRING" styleID="6" fgColor="F1FA8C" bgColor="282A36" fontStyle="1" />
+            <WordsStyle name="NUMBER" styleID="4" fgColor="BD93F9" bgColor="282A36" />
+            <WordsStyle name="COMMENT" styleID="1" fgColor="6272A4" bgColor="282A36" fontStyle="2" />
+            <WordsStyle name="OPERATOR" styleID="10" fgColor="8BE9FD" bgColor="282A36" />
+        </LexerType>
+
+        <LexerType name="python" desc="Python" ext="py">
+            <WordsStyle name="DEFAULT" styleID="11" fgColor="F8F8F2" bgColor="282A36" />
+            <WordsStyle name="KEYWORD" styleID="5" fgColor="FF79C6" bgColor="282A36" fontStyle="1" />
+            <WordsStyle name="STRING" styleID="6" fgColor="F1FA8C" bgColor="282A36" fontStyle="1" />
+            <WordsStyle name="NUMBER" styleID="4" fgColor="BD93F9" bgColor="282A36" />
+            <WordsStyle name="COMMENT" styleID="1" fgColor="6272A4" bgColor="282A36" fontStyle="2" />
+            <WordsStyle name="FUNCTION NAME" styleID="12" fgColor="8BE9FD" bgColor="282A36" />
+            <WordsStyle name="OPERATOR" styleID="10" fgColor="FF79C6" bgColor="282A36" />
+        </LexerType>
+
+        <LexerType name="json" desc="JSON" ext="json">
+            <WordsStyle name="DEFAULT" styleID="0" fgColor="F8F8F2" bgColor="282A36" />
+            <WordsStyle name="NUMBER" styleID="2" fgColor="BD93F9" bgColor="282A36" />
+            <WordsStyle name="STRING" styleID="6" fgColor="F1FA8C" bgColor="282A36" fontStyle="1" />
+            <WordsStyle name="BOOLEAN" styleID="3" fgColor="FF79C6" bgColor="282A36" fontStyle="1" />
+            <WordsStyle name="OPERATOR" styleID="4" fgColor="8BE9FD" bgColor="282A36" />
+        </LexerType>
+    </LexerStyles>
+</NotepadPlus>
+"""
+
+# Criar o arquivo para download
+output_path = Path("/mnt/data/Dracula_Theme_NotepadPlus.xml")
+output_path.write_text(dracula_xml_content, encoding="utf-8")
+
+output_path
